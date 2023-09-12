@@ -1,0 +1,47 @@
+/* header */
+.header { 
+  padding: 10px 0;
+  z-index: 10;
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    display: block;
+    max-width: 200px; 
+    margin-right: 50px;
+  }
+  &__hamburger {
+    display: none;
+  }
+  @include media-breakpoint-down(md) {
+    &__hamburger {
+      display: block;
+      padding-right: 0;
+      margin-left: auto;
+      .hamburger-box {
+        display: block;
+      }
+    }
+  }
+}
+
+// stiky menu
+#headerSticky {
+  &.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    animation: showStyky 0.5s;
+  }
+}
+@keyframes showStyky {
+  0% {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0)
+  }
+}
+/* /header */

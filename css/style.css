@@ -1,0 +1,375 @@
+/* reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+button,
+input,
+a,
+textarea {
+  outline: none;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img, svg {
+  max-width: 100%;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+/* /reset */
+/* mulish-regular - cyrillic_latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/mulish-v12-cyrillic_latin-regular.woff2") format("woff2"), url("../fonts/mulish-v12-cyrillic_latin-regular.ttf") format("truetype");
+  /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* mulish-500 - cyrillic_latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/mulish-v12-cyrillic_latin-500.woff2") format("woff2"), url("../fonts/mulish-v12-cyrillic_latin-500.ttf") format("truetype");
+  /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* mulish-600 - cyrillic_latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/mulish-v12-cyrillic_latin-600.woff2") format("woff2"), url("../fonts/mulish-v12-cyrillic_latin-600.ttf") format("truetype");
+  /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* mulish-700 - cyrillic_latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/mulish-v12-cyrillic_latin-700.woff2") format("woff2"), url("../fonts/mulish-v12-cyrillic_latin-700.ttf") format("truetype");
+  /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
+/* settings */
+@media (max-width: 500px) {
+  .eiv-mobile-hide {
+    display: none !important;
+  }
+}
+
+@media (min-width: 501px) {
+  .eiv-mobile-visible {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .eiv-tablet-hide {
+    display: none !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .eiv-tablet-visible {
+    display: none !important;
+  }
+}
+
+.eiv-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -30px;
+}
+.eiv-row > * {
+  word-wrap: break-word;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 30px;
+}
+
+.eiv-wrapper {
+  width: 100%;
+  max-width: 1480px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 768px) {
+  .eiv-wrapper {
+    padding-left: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .eiv-wrapper {
+    padding-right: 10px;
+  }
+}
+
+.eiv-page {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.eiv-content {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.eiv-navpage {
+  font-family: "Mulish";
+  color: #2D2D2D;
+  padding: 100px 0;
+}
+.eiv-navpage h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.eiv-navpage ul {
+  font-size: 18px;
+}
+.eiv-navpage ul li {
+  margin: 10px 0;
+}
+
+/* /settings */
+/* eiv-cart */
+.eiv-cart {
+  padding: 30px 0;
+  font-family: "Mulish";
+  color: #2d2d2d;
+}
+.eiv-cart__main {
+  max-width: 1012px;
+  margin-right: 50px;
+}
+.eiv-cart__title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 140%;
+  margin-bottom: 20px;
+  color: #750B0B;
+}
+.eiv-cart__product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 15px 10px 15px;
+  border-bottom: 1px solid rgba(170, 170, 170, 0.67);
+}
+.eiv-cart__product:first-child {
+  padding-top: 0;
+}
+.eiv-cart__product-img {
+  width: 90px;
+  height: 150px;
+  margin-right: 20px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  text-align: center;
+}
+.eiv-cart__product-img img {
+  max-height: 100%;
+}
+.eiv-cart__product-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  padding: 5px 0;
+  position: relative;
+}
+.eiv-cart__product-word {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.eiv-cart__product-title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 140%;
+  margin-bottom: 10px;
+}
+.eiv-cart__product-title a {
+  color: #2d2d2d;
+  text-decoration: none;
+}
+.eiv-cart__product-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+}
+.eiv-cart__product-select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.eiv-cart__product-counter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.eiv-cart__product-prices {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.eiv-cart__product-price-old {
+  margin-bottom: 10px;
+}
+.eiv-cart__product-favorite {
+  margin-top: auto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 100%;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.eiv-cart__product-favorite input {
+  position: absolute;
+  visibility: hidden;
+}
+.eiv-cart__product-favorite input:checked ~ span:before {
+  background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.49196 13.3318L7.25223 13.5743L7.13339 13.4567C7.05682 13.3807 6.94568 13.2706 6.80777 13.1335C6.53191 12.8594 6.14859 12.4777 5.71876 12.0469C4.85978 11.1864 3.81265 10.128 3.06646 9.34367C2.41498 8.65885 1.77109 7.9814 1.2927 7.30776C0.814883 6.63489 0.470703 5.92364 0.470703 5.16708C0.470703 2.85508 2.30449 1.32715 4.09638 1.32715C5.71375 1.32715 6.62712 2.16811 7.49959 3.12818C8.37702 2.15753 9.27634 1.32715 10.904 1.32715C12.7124 1.32715 14.5298 2.9571 14.5298 5.16708C14.5298 5.9291 14.1724 6.64238 13.6848 7.3137C13.2246 7.94717 12.617 8.58433 12.005 9.22606C11.9676 9.26526 11.9301 9.30461 11.8927 9.34388C11.1464 10.1272 10.1058 11.185 9.25323 12.0457C8.82661 12.4764 8.44657 12.8582 8.17316 13.1323C8.03646 13.2694 7.92641 13.3796 7.85052 13.4554L7.73332 13.5726L7.49196 13.3318ZM7.49196 13.3318L7.73332 13.5726L7.49312 13.8124L7.25223 13.5743L7.49196 13.3318Z' fill='%23C01F1F'/%3E%3C/svg%3E%0A");
+}
+.eiv-cart__product-favorite span {
+  display: block;
+  padding-left: 20px;
+  position: relative;
+}
+.eiv-cart__product-favorite span:before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4.09638 2.00897C2.67042 2.00897 1.15252 3.24217 1.15252 5.16708C1.15252 5.71591 1.40342 6.28607 1.84861 6.91299C2.2927 7.53836 2.89885 8.17824 3.55816 8.87131L7.49318 12.8484C7.55032 12.7912 7.61646 12.7249 7.69036 12.6508C7.96343 12.3771 8.34286 11.9959 8.7688 11.5659C9.62121 10.7054 10.6577 9.65165 11.399 8.87356C11.4327 8.83824 11.4662 8.80306 11.4996 8.76808C12.1229 8.11422 12.7008 7.50815 13.1331 6.91299C13.5893 6.285 13.8479 5.71541 13.8479 5.16708C13.8479 3.33058 12.3328 2.00897 10.904 2.00897C9.45171 2.00897 8.72523 2.77236 7.75521 3.86539L7.50089 4.152L7.24582 3.86601C6.28287 2.78625 5.53889 2.00897 4.09638 2.00897ZM7.49196 13.3318L7.25223 13.5743L7.13339 13.4567C7.05682 13.3807 6.94568 13.2706 6.80777 13.1335C6.53191 12.8594 6.14859 12.4776 5.71876 12.0469C4.85978 11.1864 3.81265 10.128 3.06646 9.34367C2.41498 8.65885 1.77109 7.9814 1.2927 7.30776C0.814883 6.63489 0.470703 5.92364 0.470703 5.16708C0.470703 2.85508 2.30449 1.32715 4.09638 1.32715C5.71375 1.32715 6.62712 2.16811 7.49959 3.12818C8.37702 2.15753 9.27634 1.32715 10.904 1.32715C12.7124 1.32715 14.5298 2.9571 14.5298 5.16708C14.5298 5.9291 14.1724 6.64238 13.6848 7.3137C13.2246 7.94717 12.617 8.58433 12.005 9.22606C11.9676 9.26526 11.9301 9.30461 11.8927 9.34388C11.1464 10.1272 10.1058 11.185 9.25323 12.0457C8.82661 12.4764 8.44657 12.8582 8.17316 13.1323C8.03646 13.2694 7.92641 13.3796 7.85052 13.4554L7.73332 13.5726L7.49196 13.3318ZM7.49196 13.3318L7.73332 13.5726L7.49312 13.8124L7.25223 13.5743L7.49196 13.3318Z' fill='black'/%3E%3C/svg%3E%0A");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.eiv-cart__product-close {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 10px;
+  right: -5px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.eiv-cart__product-close:after, .eiv-cart__product-close:before {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 1px;
+  background-color: #aaa;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.eiv-cart__product-close:after {
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.eiv-cart__product-close:before {
+  -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+  -ms-transform: translate(-50%, -50%) rotate(-45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* /eiv-cart */

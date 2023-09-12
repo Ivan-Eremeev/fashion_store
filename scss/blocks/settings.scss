@@ -1,0 +1,79 @@
+/* settings */
+// a {
+//   transition: .1s;
+//   text-decoration: none;
+// }
+// button,
+// input,
+// textarea,
+// select {
+//   font-family: Arial, sans-serif;
+//   font-size: 16px;
+// }
+// body {
+//   min-width: 319px;
+//   background-color: #fff;
+//   font-family: Arial, sans-serif;
+//   font-size: 16px;
+//   &.lock {
+//     overflow: hidden;
+//   }
+// }
+.eiv-mobile-hide {
+  @media (max-width: $break_xs) {
+    display: none !important;
+  }
+}
+.eiv-mobile-visible {
+  @media (min-width: $break_xs + 1) {
+    display: none !important;
+  }
+}
+.eiv-tablet-hide {
+  @media (max-width: $break_sm) {
+    display: none !important;
+  }
+}
+
+.eiv-tablet-visible {
+  @media (min-width: $break_sm + 1) {
+    display: none !important;
+  }
+}
+.eiv-row {
+  @include row();
+}
+.eiv-wrapper {
+  @include wrapper();
+}
+// *:-webkit-autofill {
+//   -webkit-box-shadow: inset 0 0 0 50px #fff !important;
+// }
+// *::placeholder {
+//   color: #666;
+//   opacity: 1;
+// }
+.eiv-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.eiv-content {
+  flex-grow: 1;
+}
+.eiv-navpage {
+  font-family: "Mulish";
+  color: #2D2D2D;
+  padding: 100px 0;
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  ul {
+    font-size: 18px;
+    li {
+      margin: 10px 0;
+    }
+  }
+}
+/* /settings */
