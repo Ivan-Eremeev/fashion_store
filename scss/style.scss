@@ -113,6 +113,7 @@ $break_xs: 500px;
 $text_color: #2d2d2d;
 $primary_color: #750B0B;
 $gray_color: #F5F5F5;
+$hover_color: #676767;
 
 
 // Подключение файлов
@@ -128,4 +129,5 @@ $gray_color: #F5F5F5;
 // @import 'blocks/footer';
 // @import 'blocks/menu';
 
+@import 'blocks/eiv-btn';
 @import 'blocks/eiv-cart';

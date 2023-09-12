@@ -7,35 +7,52 @@ block content
 
   .eiv-page 
 
-    .eiv-wrapper 
-
-      // eiv-cart
-      .eiv-cart
-        .eiv-wrapper 
-          .eiv-cart__main 
-            h1.eiv-cart__title Ваша корзина (3) 
-            .eiv-cart__products 
-              mixin product(imgSrc)
-                .eiv-cart__product 
-                  a(href="#").eiv-cart__product-img 
-                    img(src= imgSrc, alt="")
-                  .eiv-cart__product-content 
-                    .eiv-cart__product-word 
-                      .eiv-cart__product-title 
-                        a(href="#") Брюки (джинсы) мужские (31/34)
-                      .eiv-cart__product-text Артикул: 1812/6921/434-з-23
-                      label.eiv-cart__product-favorite 
-                        input(type="checkbox", name="favorite")
-                        span Добавить в избранное
-                    .eiv-cart__product-select 
-                    .eiv-cart__product-counter 
-                    .eiv-cart__product-prices 
-                      .eiv-cart__product-price-old 24 700 ₽
-                      .eiv-cart__product-price 14 820 ₽
-                    .eiv-cart__product-close 
-              +product('img/products/img-1.jpg')
-              +product('img/products/img-2.jpg')
-              +product('img/products/img-3.jpg')
-          .eiv-cart__sidebar 
-      // /eiv-cart
+    // eiv-cart
+    .eiv-cart
+      .eiv-wrapper 
+        .eiv-cart__main 
+          h1.eiv-cart__title Ваша корзина (3) 
+          .eiv-cart__products 
+            mixin product(imgSrc)
+              .eiv-cart__product 
+                a(href="#").eiv-cart__product-img 
+                  img(src= imgSrc, alt="")
+                .eiv-cart__product-content 
+                  .eiv-cart__product-word 
+                    .eiv-cart__product-title 
+                      a(href="#") Брюки (джинсы) мужские (31/34)
+                    .eiv-cart__product-text Артикул: 1812/6921/434-з-23
+                    label.eiv-cart__product-favorite 
+                      input(type="checkbox", name="favorite")
+                      span Добавить в избранное
+                  .eiv-cart__product-select 
+                  .eiv-cart__product-counter 
+                  .eiv-cart__product-prices 
+                    .eiv-cart__product-price-old 24 700 ₽
+                    .eiv-cart__product-price 14 820 ₽
+                  .eiv-cart__product-close 
+            +product('img/products/img-1.jpg')
+            +product('img/products/img-2.jpg')
+            +product('img/products/img-3.jpg')
+        .eiv-cart__sidebar 
+          .eiv-cart__sidebar-block 
+            .eiv-cart__subtitle Ваш заказ
+            ul.eiv-cart__sidebar-list 
+              li 
+                span Стоимость товаров 
+                span 250 000 ₽ 
+              li 
+                span Ваша скидка
+                span 70 000 ₽ 
+              li 
+                span Доставка
+                span 500 ₽ 
+            .eiv-cart__sidebar-result Итого:
+              span 180 500 ₽ 
+            form(action="#").eiv-cart__sidebar-form 
+              input(type="text" placeholder="Введите промокод")
+              button(type="submit").eiv-cart__sidebar-form-btn
+            .eiv-cart__sidebar__btn 
+              .eiv-btn.eiv-btn--brown Подтвердить заказ
+    // /eiv-cart
 
