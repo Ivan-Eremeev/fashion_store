@@ -1,0 +1,49 @@
+/* eiv-input */
+.eiv-input { 
+  position: relative;
+  &__name {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+    margin-bottom: 5px;
+    color: #000;
+    span {
+      color: $primary_color;
+    }
+  }
+  input {
+    width: 100%;
+    height: 46px;
+    padding: 0 16px;
+    background-color: $gray_color;
+    border: 1px solid transparent;
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    &::placeholder {
+      color: #666;
+    }
+    &::-webkit-outer-spin-button,
+    &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+    &[type='number'] {
+      -moz-appearance: textfield;
+    }
+  }
+  &--error {
+    input {
+      border-color: #FA1A1A;
+    }
+  }
+  &__message {
+    color: #FA1A1A;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+}
+/* /eiv-input */

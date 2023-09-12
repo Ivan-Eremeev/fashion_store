@@ -146,6 +146,108 @@
 														</div>
 						</div>
 						<h2 class="eiv-cart__title">Оформление заказа </h2>
+						<form class="eiv-cart__form" action="#"> 
+							<div class="eiv-cart__block eiv-cart__block--mb-30">
+								<div class="eiv-row">
+									<div class="eiv-cart__col-5"> 
+										<div class="eiv-cart__select mb-20">
+											<div class="eiv-select"> 
+												<div class="eiv-select__name">Адрес доставки</div>
+												<div class="eiv-select__select"> 
+													<select>
+														<option value="#">Дом</option>
+														<option value="#">Работа</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="eiv-input"> 
+											<div class="eiv-input__name">Населенный пункт<span>*</span></div>
+											<input type="text" placeholder="Введите ваш населенный пункт">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="eiv-cart__block"> 
+								<div class="eiv-cart__form-title">Доставка</div>
+								<div class="eiv-cart__delivery"> 
+									<div class="eiv-cart__checkbox">
+										<label class="eiv-checkbox">
+											<input type="radio" name="delivery"><span class="eiv-checkbox__rectangle"> </span><span class="eiv-checkbox__text">Доставка курьером по Санкт-Петербургу</span>
+										</label>
+									</div>
+									<ul class="eiv-cart__form-list"> 
+										<li>Стоимость: 300 руб.</li>
+										<li>Срок доставки: от 1 до 6 дней</li>
+										<li>Бесплатная примерка 15 мин., возможен частичный выкуп заказа.</li>
+									</ul>
+									<div class="eiv-row"> 
+										<div class="eiv-cart__col-5"> 
+											<div class="eiv-input"> 
+												<div class="eiv-input__name">Улица<span>*</span></div>
+												<input type="text" placeholder="Введите улицу" required>
+											</div>
+										</div>
+										<div class="eiv-cart__col-3"> 
+											<div class="eiv-input"> 
+												<div class="eiv-input__name">Дом<span>*</span></div>
+												<input type="number" placeholder="Введите дом" required>
+											</div>
+										</div>
+										<div class="eiv-cart__col-3"> 
+											<div class="eiv-input"> 
+												<div class="eiv-input__name">Кваритра<span>*</span></div>
+												<input type="number" placeholder="Введите квартиру" required>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="eiv-cart__delivery"> 
+									<div class="eiv-cart__checkbox">
+										<label class="eiv-checkbox">
+											<input type="radio" name="delivery"><span class="eiv-checkbox__rectangle"> </span><span class="eiv-checkbox__text">Доставка курьером СДЭК</span>
+										</label>
+									</div>
+								</div>
+								<div class="eiv-cart__delivery"> 
+									<div class="eiv-cart__checkbox">
+										<label class="eiv-checkbox">
+											<input type="radio" name="delivery"><span class="eiv-checkbox__rectangle"> </span><span class="eiv-checkbox__text">Пункт выдачи СДЭК</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="eiv-cart__block"> 
+								<div class="eiv-cart__form-title">Личные данные</div>
+								<div class="eiv-row"> 
+									<div class="eiv-cart__col-5_5"> 
+										<div class="eiv-input">
+											<div class="eiv-input__name">Имя <span>*</span></div>
+											<input type="text" placeholder="Введите имя">
+										</div>
+									</div>
+									<div class="eiv-cart__col-5_5"> 
+										<div class="eiv-input">
+											<div class="eiv-input__name">Фамилия <span>*</span></div>
+											<input type="text" placeholder="Введите фамилию">
+										</div>
+									</div>
+									<div class="eiv-cart__col-5_5"> 
+										<div class="eiv-input eiv-input--error"> 
+											<div class="eiv-input__name">Телефон <span>*</span></div>
+											<input class="js-mask-tel" type="text" placeholder="+7(___)-___-__-__">
+											<div class="eiv-input__message">*Обязательное поле для ввода</div>
+										</div>
+									</div>
+									<div class="eiv-cart__col-5_5"> 
+										<div class="eiv-input">
+											<div class="eiv-input__name">E-mail<span>*</span></div>
+											<input type="text" placeholder="Введите e-mail">
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
 					</div>
 					<div class="eiv-cart__sidebar"> 
 						<div class="eiv-cart__sidebar-block"> 
@@ -160,7 +262,7 @@
 								<input type="text" placeholder="Введите промокод">
 								<button class="eiv-cart__sidebar-form-btn" type="submit"></button>
 							</form>
-							<div class="eiv-cart__sidebar__btn"> 
+							<div class="eiv-cart__sidebar-btn"> 
 								<div class="eiv-btn eiv-btn--brown">Подтвердить заказ</div>
 							</div>
 						</div>
@@ -169,6 +271,8 @@
 			</div>
 			<!-- /eiv-cart-->
 		</div>
+		<script src="js/jquery.min.js"> </script>
+		<script src="js/plugins/jquery.inputmask.min.js"></script>
 		<script src="js/scripts.js"></script>
 	</body>
 </html>

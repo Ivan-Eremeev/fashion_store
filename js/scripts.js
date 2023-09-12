@@ -345,6 +345,9 @@ window.onload = function () {
   }
   counter('.js-counter');
 
+  // Inputmask | Маска телефона
+  $('.js-mask-tel').inputmask("+7(999)-999-99-99");
+
   // // noUiSlider || Ползунок выбора
   // if (document.getElementById('noUiSlider')) {
   //   const rangeSlider = document.getElementById('noUiSlider');
