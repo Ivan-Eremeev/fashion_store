@@ -28,7 +28,7 @@
     color: $primary_color;
   }
   &__products {
-
+    margin-bottom: 30px;
   }
   &__product {
     display: flex;
@@ -58,6 +58,7 @@
   &__product-word {
     display: flex;
     flex-direction: column;
+    margin-right: 30px;
   }
   &__product-title {
     font-size: 16px;
@@ -79,18 +80,58 @@
     font-weight: 400;
     line-height: 140%;
   }
-  &__product-select {
+  &__product-select-wrap {
     display: flex;
     align-items: center;
+    margin: 0 10px;
+    width: 120px;
+  }
+  &__product-select {
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 16px;
+      background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.64648 7.09338L7.99982 9.44005L10.3532 7.09338' stroke='%232D2D2D' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 50%;
+      right: 5px;
+      pointer-events: none;
+      transform: translate(0,-50%);
+    }
+    select {
+      min-width: 90px;
+      height: 35px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 120%;
+      border: 1px solid #E0E0E0;
+      background-color: #fff;
+      outline: none;
+      cursor: pointer;
+      user-select: none;
+      text-align: center;
+      appearance: none;
+      &::-ms-expand {
+      display: none;
+      }
+    }
   }
   &__product-counter {
     display: flex;
     align-items: center;
+    margin: 0 10px;
   }
   &__product-prices {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-left: 30px;
     font-size: 16px;
     font-weight: 400;
     line-height: 140%;

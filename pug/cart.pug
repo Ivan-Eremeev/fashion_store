@@ -11,7 +11,9 @@ block content
     .eiv-cart
       .eiv-wrapper 
         .eiv-cart__main 
+
           h1.eiv-cart__title Ваша корзина (3) 
+
           .eiv-cart__products 
             mixin product(imgSrc)
               .eiv-cart__product 
@@ -25,8 +27,22 @@ block content
                     label.eiv-cart__product-favorite 
                       input(type="checkbox", name="favorite")
                       span Добавить в избранное
-                  .eiv-cart__product-select 
+                  .eiv-cart__product-select-wrap
+                    .eiv-cart__product-select 
+                      select
+                        option(value="#") 31/34
+                        option(value="#") 31/34
+                        option(value="#") 31/34
                   .eiv-cart__product-counter 
+                    .eiv-counter.js-counter
+                      .eiv-counter__btn.js-counter-minus 
+                        svg(class="icon-minus")
+                          use(xlink:href="img/sprite.svg#minus")
+                      .eiv-counter__input.js-counter-input
+                        input(type="text" value="1" maxlength="3")
+                      .eiv-counter__btn.js-counter-plus 
+                        svg(class="icon-plus")
+                          use(xlink:href="img/sprite.svg#plus")
                   .eiv-cart__product-prices 
                     .eiv-cart__product-price-old 24 700 ₽
                     .eiv-cart__product-price 14 820 ₽
@@ -34,6 +50,9 @@ block content
             +product('img/products/img-1.jpg')
             +product('img/products/img-2.jpg')
             +product('img/products/img-3.jpg')
+
+          h2.eiv-cart__title Оформление заказа 
+          
         .eiv-cart__sidebar 
           .eiv-cart__sidebar-block 
             .eiv-cart__subtitle Ваш заказ

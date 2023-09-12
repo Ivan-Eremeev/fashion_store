@@ -1,16 +1,15 @@
 /* counter */
-.counter {
+.eiv-counter {
   display: flex;
-  width: 120px;
-  height: 40px;
+  width: 90px;
+  height: 35px;
   background: #FFFFFF;
-  border: 1px solid #E1E4EF;
-  border-radius: 6px;
+  border: 1px solid rgba(45, 45, 45, 0.10);
   &__btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90px;
+    width: 70px;
     height: 100%;
     cursor: pointer;
     user-select: none;
@@ -19,11 +18,11 @@
     fill:#ccc;
     transition: 0.1s;
     svg {
-      width: 20px;
-      height: 20px;
+      width: 14px;
+      height: 14px;
     }
     &:hover {
-      fill: blue
+      fill: $text_color;
     }
   }
   &__input {
