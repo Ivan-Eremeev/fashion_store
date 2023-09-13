@@ -173,7 +173,7 @@
 								<div class="eiv-cart__delivery"> 
 									<div class="eiv-cart__checkbox">
 										<label class="eiv-checkbox">
-											<input type="radio" name="delivery"><span class="eiv-checkbox__rectangle"> </span><span class="eiv-checkbox__text">Доставка курьером по Санкт-Петербургу</span>
+											<input type="radio" name="delivery" checked><span class="eiv-checkbox__rectangle"> </span><span class="eiv-checkbox__text">Доставка курьером по Санкт-Петербургу</span>
 										</label>
 									</div>
 									<ul class="eiv-cart__form-list"> 
@@ -220,33 +220,75 @@
 							<div class="eiv-cart__block"> 
 								<div class="eiv-cart__form-title">Личные данные</div>
 								<div class="eiv-row"> 
-									<div class="eiv-cart__col-5_5"> 
+									<div class="eiv-cart__col-6"> 
 										<div class="eiv-input">
 											<div class="eiv-input__name">Имя <span>*</span></div>
-											<input type="text" placeholder="Введите имя">
+											<input type="text" placeholder="Введите имя" required>
 										</div>
 									</div>
-									<div class="eiv-cart__col-5_5"> 
+									<div class="eiv-cart__col-6"> 
 										<div class="eiv-input">
 											<div class="eiv-input__name">Фамилия <span>*</span></div>
-											<input type="text" placeholder="Введите фамилию">
+											<input type="text" placeholder="Введите фамилию" required>
 										</div>
 									</div>
-									<div class="eiv-cart__col-5_5"> 
-										<div class="eiv-input eiv-input--error"> 
+									<div class="eiv-cart__col-6"> 
+										<div class="eiv-input"> 
 											<div class="eiv-input__name">Телефон <span>*</span></div>
-											<input class="js-mask-tel" type="text" placeholder="+7(___)-___-__-__">
+											<input class="js-mask-tel input-error" type="text" placeholder="+7(___)-___-__-__" required>
 											<div class="eiv-input__message">*Обязательное поле для ввода</div>
 										</div>
 									</div>
-									<div class="eiv-cart__col-5_5"> 
+									<div class="eiv-cart__col-6"> 
 										<div class="eiv-input">
 											<div class="eiv-input__name">E-mail<span>*</span></div>
-											<input type="text" placeholder="Введите e-mail">
+											<input type="text" placeholder="Введите e-mail" required>
+										</div>
+									</div>
+									<div class="eiv-cart__col-6 eiv-cart__subscribe">
+										<p>Подписаться на новости и специальные предложения:</p>
+										<div class="eiv-cart__gender"> 
+											<div class="eiv-cart__checkbox">
+												<label class="eiv-checkbox">
+													<input type="radio" name="gender" checked><span class="eiv-checkbox__rectangle"> </span><span class="eiv-checkbox__text">Женское</span>
+												</label>
+											</div>
+											<div class="eiv-cart__checkbox">
+												<label class="eiv-checkbox">
+													<input type="radio" name="gender"><span class="eiv-checkbox__rectangle"> </span><span class="eiv-checkbox__text">Мужское</span>
+												</label>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
+							<div class="eiv-cart__block"> 
+								<div class="eiv-cart__form-title">Оплата</div>
+								<div class="eiv-cart__delivery"> 
+									<div class="eiv-cart__checkbox">
+										<label class="eiv-checkbox">
+											<input type="radio" name="pay" checked><span class="eiv-checkbox__rectangle"> </span><span class="eiv-checkbox__text">Оплата картой на сайте</span>
+										</label>
+									</div>
+								</div>
+								<div class="eiv-cart__delivery"> 
+									<div class="eiv-cart__checkbox">
+										<label class="eiv-checkbox">
+											<input type="radio" name="pay"><span class="eiv-checkbox__rectangle"> </span><span class="eiv-checkbox__text">Оплата при получении</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="eiv-cart__block"> 
+								<div class="eiv-textarea"> 
+									<div class="eiv-textarea__name">Ваш комментарий</div>
+									<textarea></textarea>
+								</div>
+							</div>
+							<div class="eiv-cart__block"> 
+								<div class="eiv-cart__text">Нажимая на кнопку "Подтвердить заказ" вы принимаете условия <a href="#">Публичной оферты</a></div>
+							</div>
+							<div class="eiv-cart__text eiv-cart__text--brown">При заказе шести и более единиц или на сумму свыше 100 000 ₽ возможна только онлайн-оплата.</div>
 						</form>
 					</div>
 					<div class="eiv-cart__sidebar"> 

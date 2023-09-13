@@ -76,7 +76,7 @@ block content
               .eiv-cart__delivery 
                 .eiv-cart__checkbox
                   label.eiv-checkbox
-                    input(type="radio" name="delivery")
+                    input(type="radio" name="delivery" checked)
                     span.eiv-checkbox__rectangle 
                     span.eiv-checkbox__text Доставка курьером по Санкт-Петербургу
                 ul.eiv-cart__form-list 
@@ -148,28 +148,71 @@ block content
 
               .eiv-cart__form-title Личные данные
               .eiv-row 
-                .eiv-cart__col-5_5 
+                .eiv-cart__col-6 
                   .eiv-input
                     .eiv-input__name Имя 
                       span *
-                    input(type="text" placeholder="Введите имя")
-                .eiv-cart__col-5_5 
+                    input(type="text" placeholder="Введите имя" required)
+                .eiv-cart__col-6 
                   .eiv-input
                     .eiv-input__name Фамилия 
                       span *
-                    input(type="text" placeholder="Введите фамилию")
-                .eiv-cart__col-5_5 
-                  .eiv-input.eiv-input--error 
+                    input(type="text" placeholder="Введите фамилию" required)
+                .eiv-cart__col-6 
+                  .eiv-input 
                     .eiv-input__name Телефон 
                       span *
-                    input(type="text" placeholder="+7(___)-___-__-__").js-mask-tel
+                    input(type="text" placeholder="+7(___)-___-__-__" required).js-mask-tel.input-error 
                     .eiv-input__message *Обязательное поле для ввода
-                .eiv-cart__col-5_5 
+                .eiv-cart__col-6 
                   .eiv-input
                     .eiv-input__name E-mail
                       span *
-                    input(type="text" placeholder="Введите e-mail")
+                    input(type="text" placeholder="Введите e-mail" required)
               
+                .eiv-cart__col-6.eiv-cart__subscribe
+                  p Подписаться на новости и специальные предложения:
+                  .eiv-cart__gender 
+                    .eiv-cart__checkbox
+                      label.eiv-checkbox
+                        input(type="radio" name="gender" checked)
+                        span.eiv-checkbox__rectangle 
+                        span.eiv-checkbox__text Женское
+                    .eiv-cart__checkbox
+                      label.eiv-checkbox
+                        input(type="radio" name="gender")
+                        span.eiv-checkbox__rectangle 
+                        span.eiv-checkbox__text Мужское
+
+            .eiv-cart__block 
+
+              .eiv-cart__form-title Оплата
+
+              .eiv-cart__delivery 
+                .eiv-cart__checkbox
+                  label.eiv-checkbox
+                    input(type="radio" name="pay" checked)
+                    span.eiv-checkbox__rectangle 
+                    span.eiv-checkbox__text Оплата картой на сайте
+              .eiv-cart__delivery 
+                .eiv-cart__checkbox
+                  label.eiv-checkbox
+                    input(type="radio" name="pay")
+                    span.eiv-checkbox__rectangle 
+                    span.eiv-checkbox__text Оплата при получении
+
+            .eiv-cart__block 
+
+              .eiv-textarea 
+                .eiv-textarea__name Ваш комментарий
+                textarea
+
+            .eiv-cart__block 
+
+              .eiv-cart__text Нажимая на кнопку "Подтвердить заказ" вы принимаете условия 
+                a(href="#") Публичной оферты
+            
+            .eiv-cart__text.eiv-cart__text--brown При заказе шести и более единиц или на сумму свыше 100 000 ₽ возможна только онлайн-оплата.
           
         .eiv-cart__sidebar 
           .eiv-cart__sidebar-block 

@@ -30,9 +30,7 @@
     &[type='number'] {
       -moz-appearance: textfield;
     }
-  }
-  &--error {
-    input {
+    &.input-error {
       border-color: #FA1A1A;
     }
   }

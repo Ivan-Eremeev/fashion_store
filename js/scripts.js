@@ -348,6 +348,21 @@ window.onload = function () {
   // Inputmask | Маска телефона
   $('.js-mask-tel').inputmask("+7(999)-999-99-99");
 
+  // Изменение высоты textarea под вводимый текст
+  $(function () {
+    $('.eiv-textarea textarea').on('input keyup paste', function () {
+      var $el = $(this),
+        offset = $el.innerHeight() - $el.height();
+
+      if ($el.innerHeight() < this.scrollHeight) {
+        $el.height(this.scrollHeight - offset);
+      } else {
+        $el.height(1);
+        $el.height(this.scrollHeight - offset);
+      }
+    });
+  });
+
   // // noUiSlider || Ползунок выбора
   // if (document.getElementById('noUiSlider')) {
   //   const rangeSlider = document.getElementById('noUiSlider');
