@@ -10,6 +10,14 @@ block content
     // eiv-cart
     .eiv-cart
       .eiv-wrapper 
+
+        .eiv-cart__sidebar-block.eiv-tablet-visible
+          .eiv-cart__subtitle Ваш заказ
+          .eiv-cart__sidebar-result Итого:
+            span 180 500 ₽ 
+          .eiv-cart__sidebar-btn 
+            .eiv-btn.eiv-btn--brown Подтвердить заказ
+
         .eiv-cart__main 
 
           h1.eiv-cart__title.eiv-cart__title--mb10 Ваша корзина (3) 
@@ -77,15 +85,15 @@ block content
                     .eiv-input__message *Обязательное поле для ввода
 
             .eiv-cart__block 
-              .eiv-cart__form-title Доставка
+              .eiv-cart__form-title.eiv-cart__form-title--mobile-small Доставка
               
               .eiv-cart__delivery 
                 .eiv-cart__checkbox
                   label.eiv-checkbox
-                    input(type="radio" name="delivery" checked data-checkbox="delivery_0")
+                    input(type="radio" name="delivery" data-checkbox="delivery_0")
                     span.eiv-checkbox__rectangle 
                     span.eiv-checkbox__text Доставка курьером по Санкт-Петербургу
-                .eiv-cart__hide-content#delivery_0.eiv-show
+                .eiv-cart__hide-content#delivery_0
                   ul.eiv-cart__form-list 
                     li Стоимость: 300 руб.
                     li Срок доставки: от 1 до 6 дней
@@ -179,7 +187,7 @@ block content
                   .eiv-input 
                     .eiv-input__name Телефон 
                       span *
-                    input(type="text" placeholder="+7(___)-___-__-__" required).js-mask-tel.input-error 
+                    input(type="text" placeholder="Введите телефон" required).js-mask-tel.input-error 
                     .eiv-input__message *Обязательное поле для ввода
                 .eiv-cart__col-6 
                   .eiv-input
@@ -218,6 +226,12 @@ block content
                     input(type="radio" name="pay")
                     span.eiv-checkbox__rectangle 
                     span.eiv-checkbox__text Оплата при получении
+              .eiv-cart__delivery 
+                .eiv-cart__checkbox
+                  label.eiv-checkbox
+                    input(type="radio" name="pay")
+                    span.eiv-checkbox__rectangle 
+                    span.eiv-checkbox__text Наличные курьеру
 
             .eiv-cart__block 
 
@@ -230,28 +244,30 @@ block content
               .eiv-cart__text Нажимая на кнопку "Подтвердить заказ" вы принимаете условия 
                 a(href="#") Публичной оферты
             
-            .eiv-cart__text.eiv-cart__text--brown При заказе шести и более единиц или на сумму свыше 100 000 ₽ возможна только онлайн-оплата.
+            .eiv-cart__text.eiv-cart__text--brown.eiv-tablet-hide При заказе шести и более единиц или на сумму свыше 100 000 ₽ возможна только онлайн-оплата.
           
         .eiv-cart__sidebar 
           .js-sticky
             .eiv-cart__sidebar-block
               .eiv-cart__subtitle Ваш заказ
-              //- ul.eiv-cart__sidebar-list 
-              //-   li 
-              //-     span Стоимость товаров 
-              //-     span 250 000 ₽ 
-              //-   li 
-              //-     span Ваша скидка
-              //-     span 70 000 ₽ 
-              //-   li 
-              //-     span Доставка
-              //-     span 500 ₽ 
+              ul.eiv-cart__sidebar-list 
+                li 
+                  span Стоимость товаров 
+                  span 250 000 ₽ 
+                li 
+                  span Ваша скидка
+                  span 70 000 ₽ 
+                li 
+                  span Доставка
+                  span 500 ₽ 
               .eiv-cart__sidebar-result Итого:
                 span 180 500 ₽ 
-              //- form(action="#").eiv-cart__sidebar-form 
-              //-   input(type="text" placeholder="Введите промокод")
-              //-   button(type="submit").eiv-cart__sidebar-form-btn
+              form(action="#").eiv-cart__sidebar-form 
+                input(type="text" placeholder="Введите промокод")
+                button(type="submit").eiv-cart__sidebar-form-btn
               .eiv-cart__sidebar-btn 
                 .eiv-btn.eiv-btn--brown Подтвердить заказ
+
+        .eiv-cart__text.eiv-cart__text--brown.eiv-tablet-visible При заказе шести и более единиц или на сумму свыше 100 000 ₽ возможна только онлайн-оплата.
     // /eiv-cart
 

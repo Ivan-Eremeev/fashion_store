@@ -15,6 +15,13 @@
 			<!-- eiv-cart-->
 			<div class="eiv-cart">
 				<div class="eiv-wrapper"> 
+					<div class="eiv-cart__sidebar-block eiv-tablet-visible">
+						<div class="eiv-cart__subtitle">Ваш заказ</div>
+						<div class="eiv-cart__sidebar-result">Итого:<span>180 500 ₽ </span></div>
+						<div class="eiv-cart__sidebar-btn"> 
+							<div class="eiv-btn eiv-btn--brown">Подтвердить заказ</div>
+						</div>
+					</div>
 					<div class="eiv-cart__main"> 
 						<h1 class="eiv-cart__title eiv-cart__title--mb10">Ваша корзина (3) </h1>
 						<div class="eiv-cart__products"> 
@@ -185,14 +192,14 @@
 								</div>
 							</div>
 							<div class="eiv-cart__block"> 
-								<div class="eiv-cart__form-title">Доставка</div>
+								<div class="eiv-cart__form-title eiv-cart__form-title--mobile-small">Доставка</div>
 								<div class="eiv-cart__delivery"> 
 									<div class="eiv-cart__checkbox">
 										<label class="eiv-checkbox">
-											<input type="radio" name="delivery" checked data-checkbox="delivery_0"><span class="eiv-checkbox__rectangle"> </span><span class="eiv-checkbox__text">Доставка курьером по Санкт-Петербургу</span>
+											<input type="radio" name="delivery" data-checkbox="delivery_0"><span class="eiv-checkbox__rectangle"> </span><span class="eiv-checkbox__text">Доставка курьером по Санкт-Петербургу</span>
 										</label>
 									</div>
-									<div class="eiv-cart__hide-content eiv-show" id="delivery_0">
+									<div class="eiv-cart__hide-content" id="delivery_0">
 										<ul class="eiv-cart__form-list"> 
 											<li>Стоимость: 300 руб.</li>
 											<li>Срок доставки: от 1 до 6 дней</li>
@@ -305,7 +312,7 @@
 									<div class="eiv-cart__col-6"> 
 										<div class="eiv-input"> 
 											<div class="eiv-input__name">Телефон <span>*</span></div>
-											<input class="js-mask-tel input-error" type="text" placeholder="+7(___)-___-__-__" required>
+											<input class="js-mask-tel input-error" type="text" placeholder="Введите телефон" required>
 											<div class="eiv-input__message">*Обязательное поле для ввода</div>
 										</div>
 									</div>
@@ -349,6 +356,13 @@
 										</label>
 									</div>
 								</div>
+								<div class="eiv-cart__delivery"> 
+									<div class="eiv-cart__checkbox">
+										<label class="eiv-checkbox">
+											<input type="radio" name="pay"><span class="eiv-checkbox__rectangle"> </span><span class="eiv-checkbox__text">Наличные курьеру</span>
+										</label>
+									</div>
+								</div>
 							</div>
 							<div class="eiv-cart__block"> 
 								<div class="eiv-textarea"> 
@@ -359,20 +373,30 @@
 							<div class="eiv-cart__block"> 
 								<div class="eiv-cart__text">Нажимая на кнопку "Подтвердить заказ" вы принимаете условия <a href="#">Публичной оферты</a></div>
 							</div>
-							<div class="eiv-cart__text eiv-cart__text--brown">При заказе шести и более единиц или на сумму свыше 100 000 ₽ возможна только онлайн-оплата.</div>
+							<div class="eiv-cart__text eiv-cart__text--brown eiv-tablet-hide">При заказе шести и более единиц или на сумму свыше 100 000 ₽ возможна только онлайн-оплата.</div>
 						</form>
 					</div>
 					<div class="eiv-cart__sidebar"> 
 						<div class="js-sticky">
 							<div class="eiv-cart__sidebar-block">
 								<div class="eiv-cart__subtitle">Ваш заказ</div>
+								<ul class="eiv-cart__sidebar-list"> 
+									<li> <span>Стоимость товаров </span><span>250 000 ₽ </span></li>
+									<li> <span>Ваша скидка</span><span>70 000 ₽ </span></li>
+									<li> <span>Доставка</span><span>500 ₽ </span></li>
+								</ul>
 								<div class="eiv-cart__sidebar-result">Итого:<span>180 500 ₽ </span></div>
+								<form class="eiv-cart__sidebar-form" action="#"> 
+									<input type="text" placeholder="Введите промокод">
+									<button class="eiv-cart__sidebar-form-btn" type="submit"></button>
+								</form>
 								<div class="eiv-cart__sidebar-btn"> 
 									<div class="eiv-btn eiv-btn--brown">Подтвердить заказ</div>
 								</div>
 							</div>
 						</div>
 					</div>
+					<div class="eiv-cart__text eiv-cart__text--brown eiv-tablet-visible">При заказе шести и более единиц или на сумму свыше 100 000 ₽ возможна только онлайн-оплата.</div>
 				</div>
 			</div>
 			<!-- /eiv-cart-->

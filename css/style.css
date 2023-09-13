@@ -407,6 +407,7 @@ h1, h2, h3 {
 /* /eiv-input */
 /* eiv-checkbox */
 .eiv-checkbox {
+  display: block;
   padding-left: 25px;
   cursor: pointer;
   -webkit-user-select: none;
@@ -458,6 +459,11 @@ h1, h2, h3 {
   font-weight: 400;
   line-height: 140%;
   letter-spacing: -0.16px;
+}
+@media (max-width: 768px) {
+  .eiv-checkbox__text {
+    font-size: 14px;
+  }
 }
 
 /* /eiv-checkbox */
@@ -999,26 +1005,38 @@ h1, h2, h3 {
 .eiv-cart__col-5 {
   width: 45.8333333333%;
 }
+@media screen and (max-width: 768px) {
+  .eiv-cart__col-5 {
+    width: 100%;
+  }
+}
 .eiv-cart__col-3 {
   width: 27.0833333333%;
 }
+@media screen and (max-width: 768px) {
+  .eiv-cart__col-3 {
+    width: 100%;
+  }
+}
 .eiv-cart__col-6 {
   width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .eiv-cart__col-6 {
+    width: 100%;
+  }
 }
 @media (max-width: 1050px) {
   .eiv-cart .eiv-wrapper {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
-  .eiv-cart .eiv-cart__main {
-    -webkit-box-ordinal-group: 2;
-    -ms-flex-order: 1;
-    order: 1;
+  .eiv-cart__main {
     margin-right: 0;
   }
-  .eiv-cart .eiv-cart__sidebar {
+  .eiv-cart__sidebar {
     width: 100%;
-    margin-bottom: 25px;
+    margin-top: 20px;
   }
 }
 @media (max-width: 768px) {
@@ -1071,8 +1089,13 @@ h1, h2, h3 {
     font-size: 14px;
     text-align: left;
   }
+  .eiv-cart__sidebar {
+    margin-top: 0;
+  }
   .eiv-cart__sidebar-block {
+    width: 100%;
     padding: 20px 10px;
+    margin-bottom: 25px;
   }
   .eiv-cart__title {
     font-size: 20px;
@@ -1086,6 +1109,30 @@ h1, h2, h3 {
   .eiv-cart__product-price-old {
     font-size: 12px;
     margin-bottom: 0;
+  }
+  .eiv-cart__block {
+    margin-bottom: 20px;
+  }
+  .eiv-cart__block--mb-30 {
+    margin-bottom: 15px;
+  }
+  .eiv-cart__form-title--mobile-small {
+    font-size: 16px;
+  }
+  .eiv-cart__form .eiv-row {
+    margin-top: -10px;
+  }
+  .eiv-cart__form .eiv-row > * {
+    margin-top: 10px;
+  }
+  .eiv-cart__subscribe {
+    margin-top: 20px !important;
+  }
+  .eiv-cart__subscribe p {
+    margin-bottom: 10px;
+  }
+  .eiv-cart__text {
+    font-size: 12px;
   }
 }
 
