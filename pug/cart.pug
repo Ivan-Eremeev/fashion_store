@@ -15,7 +15,7 @@ block content
           h1.eiv-cart__title Ваша корзина (3) 
 
           .eiv-cart__products 
-            mixin product(imgSrc)
+            mixin product(imgSrc ,value)
               .eiv-cart__product 
                 a(href="#").eiv-cart__product-img 
                   img(src= imgSrc, alt="")
@@ -30,26 +30,27 @@ block content
                   .eiv-cart__product-select-wrap
                     .eiv-cart__product-select 
                       select
-                        option(value="#") 31/34
-                        option(value="#") 31/34
-                        option(value="#") 31/34
-                  .eiv-cart__product-counter 
-                    .eiv-counter.js-counter
-                      .eiv-counter__btn.js-counter-minus 
-                        svg(class="icon-minus")
-                          use(xlink:href="img/sprite.svg#minus")
-                      .eiv-counter__input.js-counter-input
-                        input(type="text" value="1" maxlength="3")
-                      .eiv-counter__btn.js-counter-plus 
-                        svg(class="icon-plus")
-                          use(xlink:href="img/sprite.svg#plus")
-                  .eiv-cart__product-prices 
-                    .eiv-cart__product-price-old 24 700 ₽
-                    .eiv-cart__product-price 14 820 ₽
-                  .eiv-cart__product-close 
-            +product('img/products/img-1.jpg')
-            +product('img/products/img-2.jpg')
-            +product('img/products/img-3.jpg')
+                        option(value="#")= value
+                        option(value="#")= value
+                        option(value="#")= value
+                  .eiv-cart__product-bottom 
+                    .eiv-cart__product-counter 
+                      .eiv-counter.js-counter
+                        .eiv-counter__btn.js-counter-minus 
+                          svg(class="icon-minus")
+                            use(xlink:href="img/sprite.svg#minus")
+                        .eiv-counter__input.js-counter-input
+                          input(type="text" value="1" maxlength="3")
+                        .eiv-counter__btn.js-counter-plus 
+                          svg(class="icon-plus")
+                            use(xlink:href="img/sprite.svg#plus")
+                    .eiv-cart__product-prices 
+                      .eiv-cart__product-price-old 24 700 ₽
+                      .eiv-cart__product-price 14 820 ₽
+                    .eiv-cart__product-close 
+            +product('img/products/img-1.jpg', '31/34')
+            +product('img/products/img-2.jpg', '36')
+            +product('img/products/img-3.jpg', '31/34')
 
           h2.eiv-cart__title Оформление заказа 
 
@@ -69,6 +70,7 @@ block content
                     .eiv-input__name Населенный пункт
                       span *
                     input(type="text" placeholder="Введите ваш населенный пункт")
+                    .eiv-input__message *Обязательное поле для ввода
 
             .eiv-cart__block 
               .eiv-cart__form-title Доставка
@@ -76,73 +78,82 @@ block content
               .eiv-cart__delivery 
                 .eiv-cart__checkbox
                   label.eiv-checkbox
-                    input(type="radio" name="delivery" checked)
+                    input(type="radio" name="delivery" checked data-checkbox="delivery_0")
                     span.eiv-checkbox__rectangle 
                     span.eiv-checkbox__text Доставка курьером по Санкт-Петербургу
-                ul.eiv-cart__form-list 
-                  li Стоимость: 300 руб.
-                  li Срок доставки: от 1 до 6 дней
-                  li Бесплатная примерка 15 мин., возможен частичный выкуп заказа.
-                .eiv-row 
-                  .eiv-cart__col-5 
-                    .eiv-input 
-                      .eiv-input__name Улица
-                        span *
-                      input(type="text" placeholder="Введите улицу" required)
-                  .eiv-cart__col-3 
-                    .eiv-input 
-                      .eiv-input__name Дом
-                        span *
-                      input(type="number" placeholder="Введите дом" required)
-                  .eiv-cart__col-3 
-                    .eiv-input 
-                      .eiv-input__name Кваритра
-                        span *
-                      input(type="number" placeholder="Введите квартиру" required)
+                .eiv-cart__hide-content#delivery_0.eiv-show
+                  ul.eiv-cart__form-list 
+                    li Стоимость: 300 руб.
+                    li Срок доставки: от 1 до 6 дней
+                    li Бесплатная примерка 15 мин., возможен частичный выкуп заказа.
+                  .eiv-row 
+                    .eiv-cart__col-5 
+                      .eiv-input 
+                        .eiv-input__name Улица
+                          span *
+                        input(type="text" placeholder="Введите улицу" required)
+                        .eiv-input__message *Обязательное поле для ввода
+                    .eiv-cart__col-3 
+                      .eiv-input 
+                        .eiv-input__name Дом
+                          span *
+                        input(type="number" placeholder="Введите дом" required)
+                        .eiv-input__message *Обязательное поле для ввода
+                    .eiv-cart__col-3 
+                      .eiv-input 
+                        .eiv-input__name Кваритра
+                          span *
+                        input(type="number" placeholder="Введите квартиру" required)
+                        .eiv-input__message *Обязательное поле для ввода
               
               .eiv-cart__delivery 
                 .eiv-cart__checkbox
                   label.eiv-checkbox
-                    input(type="radio" name="delivery")
+                    input(type="radio" name="delivery" data-checkbox="delivery_1")
                     span.eiv-checkbox__rectangle 
                     span.eiv-checkbox__text Доставка курьером СДЭК
-                //- ul.eiv-cart__form-list 
-                //-   li Стоимость: 300 руб.
-                //-   li Срок доставки: от 1 до 6 дней
-                //-   li Бесплатная примерка 15 мин., возможен частичный выкуп заказа.
-                //- .eiv-row 
-                //-   .eiv-cart__col-5 
-                //-     .eiv-input 
-                //-       .eiv-input__name Улица
-                //-         span *
-                //-       input(type="text" placeholder="Введите улицу" required)
-                //-   .eiv-cart__col-3 
-                //-     .eiv-input 
-                //-       .eiv-input__name Дом
-                //-         span *
-                //-       input(type="number" placeholder="Введите дом" required)
-                //-   .eiv-cart__col-3 
-                //-     .eiv-input 
-                //-       .eiv-input__name Кваритра
-                //-         span *
-                //-       input(type="number" placeholder="Введите квартиру" required)
+                .eiv-cart__hide-content#delivery_1
+                  ul.eiv-cart__form-list 
+                    li Стоимость: 300 руб.
+                    li Срок доставки: от 1 до 6 дней
+                    li Бесплатная примерка 15 мин., возможен частичный выкуп заказа.
+                  .eiv-row 
+                    .eiv-cart__col-5 
+                      .eiv-input 
+                        .eiv-input__name Улица
+                          span *
+                        input(type="text" placeholder="Введите улицу" required)
+                        .eiv-input__message *Обязательное поле для ввода
+                    .eiv-cart__col-3 
+                      .eiv-input 
+                        .eiv-input__name Дом
+                          span *
+                        input(type="number" placeholder="Введите дом" required)
+                        .eiv-input__message *Обязательное поле для ввода
+                    .eiv-cart__col-3 
+                      .eiv-input 
+                        .eiv-input__name Кваритра
+                          span *
+                        input(type="number" placeholder="Введите квартиру" required)
+                        .eiv-input__message *Обязательное поле для ввода
 
               .eiv-cart__delivery 
                 .eiv-cart__checkbox
                   label.eiv-checkbox
-                    input(type="radio" name="delivery")
+                    input(type="radio" name="delivery" data-checkbox="delivery_2")
                     span.eiv-checkbox__rectangle 
                     span.eiv-checkbox__text Пункт выдачи СДЭК
-                //- ul.eiv-cart__form-list 
-                //-   li Стоимость: 300 руб.
-                //-   li Срок доставки: от 1 до 6 дней
-                //-   li Бесплатная примерка 15 мин., возможен частичный выкуп заказа.
-                //- .eiv-row 
-                //-   .eiv-cart__col-6 
-                //-     .eiv-input.mb-30
-                //-       input(type="text")
-                //-     .eiv-cart__form-btn 
-                //-       button.eiv-btn.eiv-btn--brown Изменить пункт выдачи СДЭК
+                .eiv-cart__hide-content#delivery_2
+                  ul.eiv-cart__form-list 
+                    li Стоимость: 300 руб.
+                    li Срок доставки: от 1 до 6 дней
+                    li Бесплатная примерка 15 мин., возможен частичный выкуп заказа.
+                  .eiv-row 
+                    .eiv-cart__col-6 
+                      .eiv-input.mb-30
+                        input(type="text")
+                      .eiv-cart__form-btn 
+                        button.eiv-btn.eiv-btn--brown Изменить пункт выдачи СДЭК
 
             .eiv-cart__block 
 
@@ -153,11 +164,13 @@ block content
                     .eiv-input__name Имя 
                       span *
                     input(type="text" placeholder="Введите имя" required)
+                    .eiv-input__message *Обязательное поле для ввода
                 .eiv-cart__col-6 
                   .eiv-input
                     .eiv-input__name Фамилия 
                       span *
                     input(type="text" placeholder="Введите фамилию" required)
+                    .eiv-input__message *Обязательное поле для ввода
                 .eiv-cart__col-6 
                   .eiv-input 
                     .eiv-input__name Телефон 
@@ -169,6 +182,7 @@ block content
                     .eiv-input__name E-mail
                       span *
                     input(type="text" placeholder="Введите e-mail" required)
+                    .eiv-input__message *Обязательное поле для ввода
               
                 .eiv-cart__col-6.eiv-cart__subscribe
                   p Подписаться на новости и специальные предложения:
@@ -215,24 +229,25 @@ block content
             .eiv-cart__text.eiv-cart__text--brown При заказе шести и более единиц или на сумму свыше 100 000 ₽ возможна только онлайн-оплата.
           
         .eiv-cart__sidebar 
-          .eiv-cart__sidebar-block 
-            .eiv-cart__subtitle Ваш заказ
-            ul.eiv-cart__sidebar-list 
-              li 
-                span Стоимость товаров 
-                span 250 000 ₽ 
-              li 
-                span Ваша скидка
-                span 70 000 ₽ 
-              li 
-                span Доставка
-                span 500 ₽ 
-            .eiv-cart__sidebar-result Итого:
-              span 180 500 ₽ 
-            form(action="#").eiv-cart__sidebar-form 
-              input(type="text" placeholder="Введите промокод")
-              button(type="submit").eiv-cart__sidebar-form-btn
-            .eiv-cart__sidebar-btn 
-              .eiv-btn.eiv-btn--brown Подтвердить заказ
+          .js-sticky
+            .eiv-cart__sidebar-block
+              .eiv-cart__subtitle Ваш заказ
+              ul.eiv-cart__sidebar-list 
+                li 
+                  span Стоимость товаров 
+                  span 250 000 ₽ 
+                li 
+                  span Ваша скидка
+                  span 70 000 ₽ 
+                li 
+                  span Доставка
+                  span 500 ₽ 
+              .eiv-cart__sidebar-result Итого:
+                span 180 500 ₽ 
+              form(action="#").eiv-cart__sidebar-form 
+                input(type="text" placeholder="Введите промокод")
+                button(type="submit").eiv-cart__sidebar-form-btn
+              .eiv-cart__sidebar-btn 
+                .eiv-btn.eiv-btn--brown Подтвердить заказ
     // /eiv-cart
 

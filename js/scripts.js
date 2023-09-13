@@ -250,18 +250,18 @@ window.onload = function () {
   // }
   // accordion($('.js-accordion'), true);
 
-  // // Sticky Sidebar | Липкий сайдбар
-  // if ($('.js-sticky').length) {
-  //   var stickySidebar = new StickySidebar('.js-sticky', {
-  //     topSpacing: 65,
-  //     bottomSpacing: 10,
-  //     containerSelector: false,
-  //     innerWrapperSelector: '.sidebar__inner',
-  //     resizeSensor: true,
-  //     stickyClass: 'is-affixed',
-  //     minWidth: 0
-  //   });
-  // }
+  // Sticky Sidebar | Липкий сайдбар
+  if ($('.js-sticky').length) {
+    var stickySidebar = new StickySidebar('.js-sticky', {
+      topSpacing: 10,
+      bottomSpacing: 10,
+      containerSelector: false,
+      innerWrapperSelector: '.sidebar__inner',
+      resizeSensor: true,
+      stickyClass: 'is-affixed',
+      minWidth: 0
+    });
+  }
 
   // // Кнопка скролла вверх страницы
   // function scrollUp() {
@@ -361,6 +361,16 @@ window.onload = function () {
         $el.height(this.scrollHeight - offset);
       }
     });
+  });
+
+  // Переключение доставок
+  $(function () {
+    let content = $('.eiv-cart__hide-content');
+    $('[data-checkbox]').on('change', function () {
+      let contentCurrent = $('#' + $(this).data('checkbox'));
+      content.removeClass('eiv-show');
+      contentCurrent.addClass('eiv-show');
+    })
   });
 
   // // noUiSlider || Ползунок выбора

@@ -32,9 +32,13 @@
     }
     &.input-error {
       border-color: #FA1A1A;
+      ~ .eiv-input__message {
+        display: block;
+      }
     }
   }
   &__message {
+    display: none;
     color: #FA1A1A;
     font-size: 14px;
     font-weight: 400;
