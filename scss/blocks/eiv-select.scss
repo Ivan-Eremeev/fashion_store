@@ -24,6 +24,7 @@
       top: 50%;
       right: 16px;
       transform: translate(0,-50%);
+      pointer-events: none;
     }
     select {
       width: 100%;
@@ -36,6 +37,8 @@
       font-weight: 400;
       color: #666;
       outline: none;
+      cursor: pointer;
+      user-select: none;
       appearance: none;
       &::-ms-expand {
       display: none;
