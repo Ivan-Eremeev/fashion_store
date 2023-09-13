@@ -34,9 +34,18 @@
     display: none !important;
   }
 }
-
 .eiv-tablet-visible {
   @media (min-width: $break_sm + 1) {
+    display: none !important;
+  }
+}
+.eiv-noutbook-hide {
+  @media (max-width: $break_md) {
+    display: none !important;
+  }
+}
+.eiv-noutbook-visible {
+  @media (min-width: $break_md + 1) {
     display: none !important;
   }
 }

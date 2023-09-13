@@ -12,6 +12,7 @@
   }
   &__sidebar {
     width: 380px;
+    flex-shrink: 0;
   }
   &__title {
     font-size: 24px;
@@ -53,12 +54,15 @@
     display: flex;
     justify-content: space-between;
     flex-grow: 1;
+    width: calc(64% - 120px);
     padding: 5px 0;
   }
   &__product-word {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    flex-shrink: 0;
+    width: 64%;
     margin-right: 30px;
   }
   &__product-title {
@@ -80,13 +84,14 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 140%;
+    margin-bottom: 20px;
   }
   &__product-select-wrap {
     display: flex;
     align-items: center;
     flex-grow: 1;
+    width: 36%;
     margin: 0 10px;
-    width: 120px;
   }
   &__product-select {
     position: relative;
@@ -126,6 +131,8 @@
   &__product-bottom {
     display: flex;
     flex-grow: 1;
+    flex-shrink: 0;
+    width: calc(36% - 120px);
   }
   &__product-counter {
     display: flex;
@@ -427,13 +434,25 @@
     @include col(5.5);
     @include col-sm(12);
   }
-  &__col-3 {
+  &__col-3-6 {
+    @include col(3.25);
+    @include col-sm(6);
+  }
+  &__col-3-12 {
     @include col(3.25);
     @include col-sm(12);
   }
   &__col-6 {
     @include col(6);
     @include col-sm(12);
+  }
+  @media (max-width: $break_lg) {
+    &__product-word {
+      width: 55%;
+    }
+    &__product-select-wrap {
+      width: 45%;
+    }
   }
   @media (max-width: $break_md) {
     .eiv-wrapper {
@@ -444,7 +463,10 @@
     }
     &__sidebar {
       width: 100%;
-      margin-top: 20px;
+    }
+    &__sidebar-block {
+      width: 100%;
+      margin-bottom: 25px;
     }
   }
   @media (max-width: $break_sm) {
@@ -461,6 +483,9 @@
     &__product-content {
       display: block;
       width: calc(100% - 90px);
+    }
+    &__product-word {
+      width: auto;
     }
     &__product-bottom {
       width: 100%;
@@ -496,13 +521,8 @@
         text-align: left;
       }
     }
-    &__sidebar {
-      margin-top: 0;
-    }
     &__sidebar-block {
-      width: 100%;
       padding: 20px 10px;
-      margin-bottom: 25px;
     }
     &__title {
       font-size: 20px;

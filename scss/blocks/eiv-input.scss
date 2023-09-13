@@ -47,5 +47,10 @@
     top: 100%;
     left: 0;
   }
+  @media (max-width: $break_sm) {
+    &__message {
+      font-size: 12px;
+    }
+  }
 }
 /* /eiv-input */
