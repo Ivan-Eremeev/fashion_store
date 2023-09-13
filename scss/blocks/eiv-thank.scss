@@ -19,6 +19,9 @@
       line-height: 160%;
       margin-bottom: 40px;
     }
+    b {
+      font-weight: 600;
+    }
     a {
       color: $primary_color;
       text-decoration: underline;
@@ -43,6 +46,7 @@
     font-size: 16px;
     font-weight: 600;
     line-height: 120%;
+    color: $primary_color;
     margin-bottom: 10px;
   }
   &__contact {

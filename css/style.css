@@ -1216,6 +1216,9 @@ h1, h2, h3 {
   line-height: 160%;
   margin-bottom: 40px;
 }
+.eiv-thank__word b {
+  font-weight: 600;
+}
 .eiv-thank__word a {
   color: #750B0B;
   text-decoration: underline;
@@ -1239,6 +1242,7 @@ h1, h2, h3 {
   font-size: 16px;
   font-weight: 600;
   line-height: 120%;
+  color: #750B0B;
   margin-bottom: 10px;
 }
 .eiv-thank__contact-row {
