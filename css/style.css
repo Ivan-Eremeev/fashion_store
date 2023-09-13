@@ -163,6 +163,12 @@ h1, h2, h3 {
     padding-right: 20px;
   }
 }
+@media (max-width: 768px) {
+  .eiv-wrapper--mobile-small-padding {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+}
 
 .eiv-page {
   min-height: 100vh;
@@ -1137,3 +1143,129 @@ h1, h2, h3 {
 }
 
 /* /eiv-cart */
+/* eiv-thank */
+.eiv-thank {
+  padding: 30px 0 100px;
+  font-family: "Mulish";
+  color: #000;
+}
+.eiv-thank__word {
+  max-width: 580px;
+  margin-bottom: 70px;
+}
+.eiv-thank__word h1, .eiv-thank__word h2, .eiv-thank__word h3, .eiv-thank__word h4, .eiv-thank__word h5, .eiv-thank__word h6 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  margin-bottom: 20px;
+}
+.eiv-thank__word p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 160%;
+  margin-bottom: 40px;
+}
+.eiv-thank__word a {
+  color: #750B0B;
+  text-decoration: underline;
+}
+.eiv-thank__word table {
+  width: 100%;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+}
+.eiv-thank__word table td {
+  padding: 5px 0;
+}
+.eiv-thank__word table td:nth-child(1) {
+  white-space: nowrap;
+}
+.eiv-thank__word table td:nth-child(2) {
+  padding-left: 30px;
+}
+.eiv-thank__subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 120%;
+  margin-bottom: 10px;
+}
+.eiv-thank__contact-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-top: -10px;
+}
+.eiv-thank__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 4px 0;
+  margin-left: 10px;
+  margin-top: 10px;
+  color: #666;
+  fill: #666;
+  text-decoration: none;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+  white-space: nowrap;
+}
+.eiv-thank__item svg {
+  width: 20px;
+  height: 20px;
+  margin-right: 12px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+}
+@media (min-width: 769px) {
+  .eiv-thank__item:hover {
+    color: #750B0B;
+    fill: #750B0B;
+  }
+}
+@media (max-width: 768px) {
+  .eiv-thank {
+    padding: 20px 0 50px;
+  }
+  .eiv-thank__word {
+    margin-bottom: 50px;
+  }
+  .eiv-thank__word h1, .eiv-thank__word h2, .eiv-thank__word h3, .eiv-thank__word h4, .eiv-thank__word h5, .eiv-thank__word h6 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  .eiv-thank__word p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .eiv-thank__word table {
+    font-size: 14px;
+  }
+  .eiv-thank__word table td {
+    padding-top: 7.5px;
+    padding-bottom: 7.5px;
+  }
+  .eiv-thank__subtitle {
+    margin-bottom: 15px;
+  }
+  .eiv-thank__item {
+    padding: 10px;
+    background-color: #F5F5F5;
+  }
+  .eiv-thank__item svg {
+    display: none;
+  }
+}
+
+/* /eiv-thank */

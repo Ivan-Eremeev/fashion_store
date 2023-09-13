@@ -1,0 +1,114 @@
+/* eiv-thank */
+.eiv-thank { 
+  padding: 30px 0 100px;
+  font-family: "Mulish";
+  color: #000;
+  &__word {
+    max-width: 580px;
+    margin-bottom: 70px;
+    h1,h2,h3,h4,h5,h6 {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 0.6px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 160%;
+      margin-bottom: 40px;
+    }
+    a {
+      color: $primary_color;
+      text-decoration: underline;
+    }
+    table {
+      width: 100%;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 30px;
+      td {
+        padding: 5px 0;
+        &:nth-child(1) {
+          white-space: nowrap;
+        }
+        &:nth-child(2) {
+          padding-left: 30px;
+        }
+      }
+    }
+  }
+  &__subtitle {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 120%;
+    margin-bottom: 10px;
+  }
+  &__contact {
+    
+  }
+  &__contact-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-top: -10px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 4px 0;
+    margin-left: 10px;
+    margin-top: 10px;
+    color: #666;
+    fill: #666;
+    text-decoration: none;
+    transition: 0.1s;
+    white-space: nowrap;
+    svg {
+      width: 20px;
+      height: 20px;
+      margin-right: 12px;
+      flex-shrink: 0;
+    }
+    @media (min-width: $break_sm + 1) {
+      &:hover {
+        color: $primary_color;
+        fill: $primary_color;
+      }
+    }
+  }
+  @media (max-width: $break_sm) {
+    padding: 20px 0 50px;
+    &__word {
+      margin-bottom: 50px;
+      h1,h2,h3,h4,h5,h6 {
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+      p {
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+      table {
+        font-size: 14px;
+        td {
+          padding-top: 7.5px;
+          padding-bottom: 7.5px;
+        }
+      }
+    }
+    &__subtitle {
+      margin-bottom: 15px;
+    }
+    &__item {
+      padding: 10px;
+      background-color: #F5F5F5;
+      svg {
+        display: none;
+      }
+    }
+  }
+}
+/* /eiv-thank */

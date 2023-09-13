@@ -17,45 +17,6 @@ $break_md: 1050px;
 $break_sm: 768px;
 $break_xs: 500px;
 
-// // Переменные для кастомизации Bootstrap 5
-// $grid-gutter-width: 15px; // Отступы между колонками
-// $grid-columns: 12; // Колличество колонок
-// $grid-breakpoints: ( // Брейкпоинты
-//   xs: 0,
-//   sm: 576px,
-//   md: 768px,
-//   lg: 992px,
-//   xl: 1200px,
-//   xxl: 1400px
-// ) !default;
-// $container-max-widths: ( // Максимальная ширина контейнера
-//   sm: 540px,
-//   md: 720px,
-//   lg: 960px,
-//   xl: 1140px,
-//   xxl: 1320px
-// ) !default;
-// $gutter: $grid-gutter-width; // Переменная для задания отступов равных междуколоночным
-
-// $gutters: (
-//   0: 0,
-//   1: $grid-gutter-width * 0.5,
-//   2: $grid-gutter-width * 0.75,
-//   3: $grid-gutter-width * 1,
-//   4: $grid-gutter-width * 1.5,
-//   5: $grid-gutter-width * 2,
-// );
-// $spacers: (
-//   0: 0,
-//   1: $grid-gutter-width * 0.5,
-//   2: $grid-gutter-width * 0.75,
-//   3: $grid-gutter-width * 1,
-//   4: $grid-gutter-width * 1.5,
-//   5: $grid-gutter-width * 2,
-// );
-
-// @import 'bootstrap/bootstrap'; // Подключение бутстрап
-
 // Шрифты
 /* mulish-regular - cyrillic_latin */
 @font-face {
@@ -136,3 +97,4 @@ $hover_color: #676767;
 @import 'blocks/eiv-textarea';
 
 @import 'blocks/eiv-cart';
+@import 'blocks/eiv-thank';

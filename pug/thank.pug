@@ -1,0 +1,47 @@
+extends core/base.pug
+
+block title 
+  title Навигация по страницам
+
+block content
+
+  .eiv-page 
+
+    // eiv-thank
+    .eiv-thank
+      .eiv-wrapper.eiv-wrapper--mobile-small-padding
+        .eiv-thank__word 
+          h1 Спасибо!
+          p Ваш заказ №F463372 успешно создан!
+          p Ожидайте звонок от нашего менеджера для подтверждения доставки. <br>Посмотреть детали заказа можно в личном кабинете в разделе 
+            a(href="#") «Заказы». 
+          table 
+            tr 
+              td Способ доставки:
+              td Пункт выдачи СДЭК
+            tr 
+              td Адрес доставки:
+              td Санкт-Петербург, ул. Тележная, 9 пом 5H
+            tr 
+              td Оплата:
+              td Картой на сайте
+            tr 
+              td Получатель:
+              td Иванова Ольга
+            tr 
+              td Телефон получателя:
+              td +7(921)636-3636
+
+        .eiv-thank__contact 
+          .eiv-thank__subtitle У вас остались вопросы? 
+          .eiv-thank__contact-row 
+            a(href="#").eiv-thank__item 
+              svg(class="icon-tg")
+                use(xlink:href="img/sprite.svg#tg")
+              | Telegram
+            a(href="#").eiv-thank__item 
+              svg(class="icon-whatsapp")
+                use(xlink:href="img/sprite.svg#whatsapp")
+              | WhatsApp
+            a(href="tel:88005009987").eiv-thank__item 8 800 500 99 87
+    // /eiv-thank
