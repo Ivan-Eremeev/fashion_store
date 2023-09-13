@@ -19,6 +19,9 @@
     line-height: 140%;
     margin-bottom: 20px;
     color: $primary_color;
+    &--mb10 {
+      margin-bottom: 10px;
+    }
   }
   &__subtitle {
     font-size: 20px;
@@ -34,9 +37,7 @@
     display: flex;
     padding: 10px 15px 10px 15px;
     border-bottom: 1px solid rgba(170, 170, 170, 0.67);
-    &:first-child {
-      padding-top: 0;
-    }
+    position: relative;
   }
   &__product-img {
     width: 90px;
@@ -53,7 +54,6 @@
     justify-content: space-between;
     flex-grow: 1;
     padding: 5px 0;
-    position: relative;
   }
   &__product-word {
     display: flex;
@@ -190,8 +190,8 @@
     width: 20px;
     height: 20px;
     position: absolute;
-    top: 10px;
-    right: -5px;
+    top: 20px;
+    right: 10px;
     cursor: pointer;
     user-select: none;
     &:after,&:before {
@@ -222,9 +222,12 @@
   &__sidebar-block {
     padding: 30px 20px;
     background-color: $gray_color;
+    .eiv-cart__subtitle {
+      margin-bottom: 20px;
+    }
   }
   &__sidebar-list {
-    padding: 20px 0;
+    padding-bottom: 20px;
     font-size: 16px;
     font-weight: 500;
     line-height: 150%;
@@ -435,10 +438,78 @@
     }
     .eiv-cart__main {
       order: 1;
+      margin-right: 0;
     }
     .eiv-cart__sidebar {
       width: 100%;
       margin-bottom: 25px;
+    }
+  }
+  @media (max-width: $break_sm) {
+    padding: 25px 0;
+    &__product {
+      flex-wrap: wrap;
+      padding: 20px 0;
+    }
+    &__product-img {
+      width: 80px;
+      height: 133px;
+      margin-right: 10px;
+    }
+    &__product-content {
+      display: block;
+      width: calc(100% - 90px);
+    }
+    &__product-bottom {
+      width: 100%;
+      margin-top: 5px;
+      margin-bottom: 20px;
+    }
+    &__product-select-wrap {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    &__product-counter {
+      margin-left: 0;
+      margin-right: 0;
+    }
+    &__product-title {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+    &__product-text {
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+    &__product-select-wrap {
+      width: auto;
+    }
+    &__product-select {
+      select {
+        height: 25px;
+        min-width: 0;
+        border-color: transparent;
+        padding-left: 0;
+        font-size: 14px;
+        text-align: left;
+      }
+    }
+    &__sidebar-block {
+      padding: 20px 10px;
+    }
+    &__title {
+      font-size: 20px;
+      &--mb10 {
+        margin-bottom: 0;
+      }
+    }
+
+    &__product-prices {
+      text-align: right;
+    }
+    &__product-price-old {
+      font-size: 12px;
+      margin-bottom: 0;
     }
   }
 }
