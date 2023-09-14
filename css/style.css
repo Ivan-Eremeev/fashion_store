@@ -518,6 +518,7 @@ h1, h2, h3 {
   width: 100%;
   height: 46px;
   padding: 13.5px 16px;
+  border-radius: 0;
   background-color: #F5F5F5;
   border: 1px solid transparent;
   outline: none;
