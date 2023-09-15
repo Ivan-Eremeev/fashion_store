@@ -121,5 +121,12 @@
       }
     }
   }
+  @media (max-width: 340px) {
+    &__word {
+      p {
+        font-size: 13px;
+      }
+    }
+  }
 }
 /* /eiv-thank */

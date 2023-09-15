@@ -300,6 +300,8 @@ h1, h2, h3 {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
+  font-family: "Mulish";
+  font-size: 16px;
 }
 .eiv-btn--brown {
   background-color: #750B0B;
@@ -522,6 +524,7 @@ h1, h2, h3 {
   background-color: #F5F5F5;
   border: 1px solid transparent;
   outline: none;
+  font-family: "Mulish";
   font-size: 14px;
   font-weight: 400;
   resize: none;
@@ -1331,6 +1334,11 @@ h1, h2, h3 {
   }
   .eiv-thank__item svg {
     display: none;
+  }
+}
+@media (max-width: 340px) {
+  .eiv-thank__word p {
+    font-size: 13px;
   }
 }
 
